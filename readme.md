@@ -62,7 +62,7 @@ check_and_add_ImageType.py
 	This command create a hidden folder:
 	`project1\BIDS_output\.heudiconv`
 		
-	The "project1\BIDS_output\.heudiconv\004\info\dicominfo.tsv" file has the dicom parsing information for writing your project-specific heuristic.py file.
+	The "project1\BIDS_output\\.heudiconv\004\info\dicominfo.tsv" file has the dicom parsing information for writing your project-specific heuristic.py file.
 						
 6. write your own heuristic.py based on the dicominfo.tsv, there are many examples:  
    https://github.com/nipy/heudiconv/tree/master/heuristics
