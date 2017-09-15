@@ -20,7 +20,7 @@ check_and_add_ImageType.py
   some 7T topsy missing the ImageType tag, heudiconv reports and error! use this script to fix it.
 
 # How to build your own heuristic.py file and run it? 
-1. instal bids-validator  
+1. install bids-validator  
   *  Install Node.js (at least version 4.4.4)  
 	`sudo apt-get update`  
 	`sudo apt-get install nodejs`  
@@ -76,6 +76,17 @@ check_and_add_ImageType.py
 9. batch converting(reference dcm2BIDS_batch.py)
 
 
-	
-	
-	
+# How to configure/run dicom_retrieve.py? 
+1. install Java  
+  `sudo apt-get install -y default-jre`
+
+2. run '20.install_dcm4che_ubuntu.sh'  
+
+3. test dcm4che's getscu  
+`getscu --bind DEFAULT --connect CFMM-Public@dicom.cfmm.robarts.ca:11112 --tls-aes --user YOUR_UWO_USERNAME --user-pass YOUR_PASSWORD, -m StudyInstanceUID=1.3.12.2.1107.5.2.34.18932.30000017052914152689000000013`  
+	note: use correct username and password(if give wrong credentials,there is an Error: java.lang.Thread.run(Thread.java.748)).
+
+4. run dicom_retrive.py  
+`python dicom_retrieve.py list.txt output_directory username password`  
+note: put patientID in list.txt(refer example:7T_BIDS_patientID_list.txt)
+  
