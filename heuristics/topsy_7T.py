@@ -26,7 +26,7 @@ def infotodict(seqinfo):
     b1inv2 = create_key('sub-{subject}/anat/sub-{subject}_acq-inv2_Sa2RAGE')
     b1div = create_key('sub-{subject}/anat/sub-{subject}_acq-b1Div_Sa2RAGE')
 
-    t2 = create_key('anat/sub-{subject}_acq-tse2D_T2w')
+    t2 = create_key('sub-{subject}/anat/sub-{subject}_acq-tse2D_T2w')
     rest = create_key('sub-{subject}/func/sub-{subject}_task-rest_bold')
     rest_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_sbref')
     dwi_PA = create_key('sub-{subject}/dwi/sub-{subject}_acq-PA_dwi')
@@ -69,7 +69,7 @@ def infotodict(seqinfo):
                 info[b1map].append({'item': s.series_id})
 
 	#t2 tse
-        if  ('t2_tse' in s.protocol_name)
+        if  ('t2_tse' in s.protocol_name):
                 info[t2].append({'item': s.series_id})
 
 	    
